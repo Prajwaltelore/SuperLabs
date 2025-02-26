@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const API_BASE_URL = "http://localhost:4000";
+const API_BASE_URL = "https://e-commerce-backend-91ml.onrender.com";
 
 interface Product {
   _id: string;
