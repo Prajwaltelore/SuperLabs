@@ -99,7 +99,7 @@ const ProductListing = () => {
 
   return (
     <div className="container">
-      <Navbar />
+      
       <h2 className="text-center my-4">Product Listing</h2>
 
       {/* Filters */}
