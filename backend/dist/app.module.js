@@ -26,9 +26,11 @@ exports.AppModule = AppModule = __decorate([
             }),
             mongoose_1.MongooseModule.forRootAsync({
                 imports: [config_1.ConfigModule],
-                useFactory: async (configService) => ({
-                    uri: configService.get('database')
-                }),
+                useFactory: async (configService) => {
+                    const uri = configService.get('database');
+                    common_1.Logger.log(`Connecting to MongoDB: ${uri}`, 'MongooseModule');
+                    return { uri };
+                },
                 inject: [config_1.ConfigService],
             }),
             v1_module_1.V1Module,

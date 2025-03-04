@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
 
 const API_BASE_URL = "https://e-commerce-backend-91ml.onrender.com";
 
@@ -98,6 +99,7 @@ const ProductListing = () => {
 
   return (
     <div className="container">
+      <Navbar />
       <h2 className="text-center my-4">Product Listing</h2>
 
       {/* Filters */}

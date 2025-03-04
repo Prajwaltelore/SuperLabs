@@ -49,7 +49,9 @@ export class ProductService {
       const products = await this.productModel
         .find(query)
         .limit(Number(limit))
-        .skip((Number(page) - 1) * Number(limit));
+        .skip((Number(page) - 1) * Number(limit))
+        .lean();
+        
   
       const totalProducts = await this.productModel.countDocuments(query);
 

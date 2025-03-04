@@ -13,8 +13,8 @@ export declare class ProductController {
             totalProducts: number;
             totalPages: number;
             currentPage: number;
-            products: (import("mongoose").Document<unknown, {}, import("../../../common/schemas/product.schema").ProductDocument> & import("../../../common/schemas/product.schema").Product & import("mongoose").Document<unknown, any, any> & Required<{
-                _id: unknown;
+            products: (import("mongoose").FlattenMaps<import("../../../common/schemas/product.schema").ProductDocument> & Required<{
+                _id: import("mongoose").FlattenMaps<unknown>;
             }> & {
                 __v: number;
             })[];
